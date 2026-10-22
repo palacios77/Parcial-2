@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="card-header bg-primary text-white">
+    Lista de elementos
+  </div>
+
+  <ul class="list-group list-group-flush">
+    @for (elemento of elementos; track elemento.id) {
+      <li class="list-group-item">
+        <button
+          class="btn btn-link"
+          (click)="seleccionarElemento(elemento)">
+          {{ elemento.nombre }}
+        </button>
+      </li>
+    }
+  </ul>
+</div>
+

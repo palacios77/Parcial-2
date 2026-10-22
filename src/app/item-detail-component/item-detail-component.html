@@ -1,0 +1,17 @@
+<div class="card">
+  <div class="card-header bg-success text-white">
+    Detalle del elemento
+  </div>
+
+  <div class="card-body">
+    @if (elemento) {
+      <h5>{{ elemento.nombre }}</h5>
+      <p><strong>ID:</strong> {{ elemento.id }}</p>
+      <p><strong>Descripción:</strong> {{ elemento.descripcion }}</p>
+      <p><strong>Estado:</strong> {{ elemento.estado }}</p>
+    } @else {
+      <p>Selecciona un elemento de la lista para ver sus detalles.</p>
+    }
+  </div>
+</div>
+

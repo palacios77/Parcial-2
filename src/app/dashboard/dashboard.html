@@ -1,0 +1,35 @@
+<div class="container mt-3">
+  <h2 class="mb-3">Panel de gestión</h2>
+
+  <div class="row">
+    <div class="col-md-6">
+      <app-item-list-component
+        [elementos]="elementos"
+        (elementoSeleccionado)="seleccionarElemento($event)">
+      </app-item-list-component>
+    </div>
+
+    <div class="col-md-6">
+      <app-item-detail-component
+        [elemento]="elementoSeleccionado">
+      </app-item-detail-component>
+    </div>
+  </div>
+
+  
+<hr>
+
+<h3>Registros compartidos del servicio</h3>
+
+<ul class="list-group">
+  @for (registro of registrosCompartidos; track registro.id) {
+    <li class="list-group-item">
+      <strong>{{ registro.nombre }}</strong>
+      - {{ registro.estado }}
+    </li>
+  }
+</ul>
+
+</div>
+
+

@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-header bg-primary text-white">
+    Gestión de registros
+  </div>
+
+  <div class="card-body">
+    <button class="btn btn-success mr-2" (click)="agregarRegistro()">
+      Agregar registro
+    </button>
+
+    <button class="btn btn-warning" (click)="modificarRegistro()">
+      Modificar registro 1
+    </button>
+
+    <hr>
+
+    <ul class="list-group">
+      @for (registro of registros; track registro.id) {
+        <li class="list-group-item">
+          <strong>{{ registro.nombre }}</strong>
+          <span class="float-right">{{ registro.estado }}</span>
+        </li>
+      }
+    </ul>
+  </div>
+</div>
